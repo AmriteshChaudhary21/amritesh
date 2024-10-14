@@ -1,49 +1,48 @@
-const navbarLinks = document.querySelectorAll(".nav-menu .nav-link");
-const menuOpenButton = document.querySelector("#menu-open-button");
-const menuCloseButton = document.querySelector("#menu-close-button");
+// Make sure to run npm install @formspree/react
+// For more help visit https://formspr.ee/react-help
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 
-menuOpenButton.addEventListener("click", () => {
-  // Toggle mobile menu visibility
-  document.body.classList.toggle("show-mobile-menu");
-});
+function ContactForm() {
+  const [state, handleSubmit] = useForm("xpwzzrzv");
+  if (state.succeeded) {
+      return <p>Thanks for joining!</p>;
+  }
+  return (
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="email">
+        Email Address
+      </label>
+      <input
+        id="email"
+        type="email" 
+        name="email"
+      />
+      <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
+      <textarea
+        id="message"
+        name="message"
+      />
+      <ValidationError 
+        prefix="Message" 
+        field="message"
+        errors={state.errors}
+      />
+      <button type="submit" disabled={state.submitting}>
+        Submit
+      </button>
+    </form>
+  );
+}
 
-// Close menu when the close button is clicked
-menuCloseButton.addEventListener("click", () => menuOpenButton.click());
+function App() {
+  return (
+    <ContactForm />
+  );
+}
 
-// Close menu when nav link is clicked
-navbarLinks.forEach((link) => {
-  link.addEventListener("click", () => menuOpenButton.click());
-});
-
-/* Initializing Swiper */
-let swiper = new Swiper(".slider-wrapper", {
-  loop: true,
-  grabCursor: true,
-  spaceBetween: 25,
-
-  // Pagination bullets
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  /* Responsive breakpoints */
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 3,
-    },
-  },
-});
+export default App;
