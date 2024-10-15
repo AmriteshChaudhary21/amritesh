@@ -221,6 +221,7 @@
             <li class="contact-info">
               <i class="fa-regular fa-envelope"></i>
               <a href= "https://mail.google.com/mail/?view=cm&fs=1&to=amriteshchaudhary21@gmail.com">amriteshchaudhary21@gmail.com</a>
+              
             </li>
             <li class="contact-info">
               <i class="fa-solid fa-phone"></i>
@@ -247,10 +248,11 @@
             </li>
           </ul>
 
-          <form action="#" class="contact-form">
-            <input type="text" placeholder="Your name" class="form-input" required />
-            <input type="email" placeholder="Your email" class="form-input" required />
-            <textarea placeholder="Your message" class="form-input" required></textarea>
+          <form action="https://formspree.io/f/xpwzzrzv" method="POST" class="contact-form">
+            <input type="text" placeholder="Name" name="Your name" class="form-input" required />
+            <input type="text" placeholder="Contact" name="Your name" class="form-input" required />
+            <input type="email" placeholder="Email" name="Your email" class="form-input" required />
+            <textarea name="Your message" placeholder="Message" class="form-input" required></textarea>
             <button type="submit" class="button submit-button">Submit</button>
           </form>
         </div>
@@ -277,7 +279,7 @@
     </main>
 
     <!-- Linking Swiper script -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 
     <!-- Linking custom script -->
     <script src="script.js"></script>
