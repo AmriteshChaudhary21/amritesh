@@ -10,10 +10,10 @@
 
 :root {
   /* Colors */
-  --white-color: #e4caca;
-  --dark-color: #252525;
-  --primary-color: #570707;
-  --secondary-color: #e98b10;
+  --white-color: #faf7f7;
+  --dark-color: #1f1e1e;
+  --primary-color: #5f0404;
+  --secondary-color: #f1ee06;
   --light-pink-color: #faf4f5;
   --medium-gray-color: #ccc;
 
@@ -649,5 +649,18 @@ header .navbar {
   .footer-section .section-content {
     flex-direction: column;
     gap: 20px;
+  }
+}
+.blinking-text {
+  font-size: 24px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
   }
 }
