@@ -1,0 +1,80 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #13036b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  /* QR Payment Container */
+  .qr-container {
+    background-color: #fafafa;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(22, 22, 22, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .qr-container h1 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  .qr-container p {
+    font-size: 16px;
+    color: #0e0d0d;
+    margin-bottom: 15px;
+  }
+  
+  /* QR Code Image */
+  .qr-code {
+    margin: 20px 0;
+  }
+  
+  .qr-code img {
+    width: 200px;
+    height: 200px;
+    border: 8px solid #dddddd;
+    border-radius: 12px;
+  }
+  
+  /* Payment Details */
+  .payment-details {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 20px;
+  }
+  
+  /* Copy Button */
+  .copy-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #5b07f8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .copy-btn:hover {
+    background-color: #0c3303;
+  }
+  
+  /* Copy Status */
+  #copy-status {
+    font-size: 14px;
+    color: #64045f;
+    margin-top: 10px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  

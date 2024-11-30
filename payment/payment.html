@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Payment</title>
+  <link rel="stylesheet" href="pay.css">
+</head>
+<body>
+  <div class="qr-container">
+    <h1>Scan to Pay</h1>
+    <p>Use your preferred UPI app to scan the QR code and complete the payment.</p>
+
+    <!-- QR Code Image -->
+    <div class="qr-code">
+      <img src="QR.jpg" alt="QR Code for Payment">
+    </div>
+
+    <!-- Amount and Details -->
+    <div class="payment-details">
+      <p><strong>Payable Amount:</strong> As charged</p>
+      <p><strong>Merchant:</strong> Amritesh Kumar</p>
+      <p><strong>UPI ID:</strong> 7488204110@ybl</p>
+    </div>
+
+    <!-- Copy UPI ID Button -->
+    <button class="copy-btn" onclick="copyUPIID()">Copy UPI ID</button>
+
+    <p id="copy-status" class="hidden">UPI ID copied to clipboard!</p>
+  </div>
+
+  <script src="payjs.js"></script>
+</body>
+</html>
